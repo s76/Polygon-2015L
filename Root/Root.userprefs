@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\s76\Scripts\Path.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\s76\Scripts\Train.cs">
     <Files>
-      <File FileName="Assets\s76\Scripts\Path.cs" Line="19" Column="4" />
+      <File FileName="Assets\s76\Scripts\MovableOnPath.cs" Line="32" Column="1" />
+      <File FileName="Assets\s76\Scripts\Path.cs" Line="109" Column="1" />
+      <File FileName="Assets\s76\Scripts\Train.cs" Line="24" Column="1" />
+      <File FileName="Assets\s76\TrainEditor.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

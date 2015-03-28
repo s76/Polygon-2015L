@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Path : MonoBehaviour {
-
+	public Train train;
 	public Transform[] points;
-	public Transform objectToMove;
-	public float speedToMove;
 	public int resolution;
 	public float progress_step;
 
@@ -21,43 +19,26 @@ public class Path : MonoBehaviour {
 			genPath = f (points,resolution,progress_step);
 		}
 
-		if (  GUILayout.Button("Move along path") ) {
-			if ( genPath == null ) {
-				Debug.Log("Need to gen path first");
-			} else if (! moving ) {
-				StartCoroutine(MoveAlongPath() );
-			}
+		if ( GUILayout.Button("Move ") ) {
+			Debug.Log("Start moving");
+			train.Prepare(genPath);
+			moving = true;
 		}
 	}
 
-	IEnumerator MoveAlongPath() {
-		Debug.Log("Start moving");
-		yield return null;
-		int current = 1;
-		for(;;) {
-			float s = speedToMove*Time.deltaTime;
-			float k = 0, _s = 0;
-			while (  _s < s ) {
-				k = (genPath[current] - genPath[current-1]).magnitude;
-				_s += k;
-				if ( current + 1 >= genPath.Length ) break;
-				current ++;
-			}
-			objectToMove.position = Vector3.Lerp(genPath[current-1],genPath[current],(s-_s)/k);
-			objectToMove.LookAt(genPath[current]);
-			yield return null;
+	void Update () {
+		if ( moving ) {
+			train.MovePerFrame(genPath,Time.deltaTime);
 		}
-		moving = false;
-		Debug.Log("Finish moving");
 	}
+
 	void OnDrawGizmos () {
-		iTween.DrawPath(points);
+		iTween.DrawPath(points,Color.green);
 	}
 	
 	void Analize (Transform[] _control_points, int _resolution, float _progress_step) {
 		float path_length = iTween.PathLength(_control_points);
 		float fragment_length = path_length/_resolution;
-		Debug.Log("fragment_length = "+ fragment_length);
 		float min=float.MaxValue,max=float.MinValue,avg=0;
 		Vector3 prev = _control_points[0].position;
 		float progress;
@@ -69,9 +50,12 @@ public class Path : MonoBehaviour {
 			if ( t > max ) max = t;
 			prev = k;
 		}
-		Debug.Log("mix step len = " + min);
+		Debug.Log("fragment_length = "+ fragment_length);
 		Debug.Log("max step len = " + max);
 		Debug.Log("avg step len = " + avg/(1/_progress_step));
+		Debug.Log("NOTE: \nthe greater resolution , the smaller fragment_length");
+		Debug.Log("NOTE: \nthe smaller fragment_length , the better movement quality");
+		Debug.Log("NOTE: \nthe larger fragment_length/max_step , the more accurate result" );
 	}
 
 	Vector3[] f (Transform[] _control_points, int _resolution, float _progress_step) {
