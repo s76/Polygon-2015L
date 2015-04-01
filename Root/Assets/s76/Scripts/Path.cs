@@ -28,7 +28,8 @@ public class Path : MonoBehaviour {
 
 	void Update () {
 		if ( moving ) {
-			train.MovePerFrame(genPath,Time.deltaTime);
+			moving = train.MovePerFrame(genPath,Time.deltaTime);
+			if( !moving) Debug.Log("Finish moving");
 		}
 	}
 
