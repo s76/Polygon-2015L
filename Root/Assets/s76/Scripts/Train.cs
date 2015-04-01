@@ -24,15 +24,16 @@ public class Train : MonoBehaviour
 		}
 	}
 
-	public void MovePerFrame(Vector3[] path,float deltaTime) {
-		if ( stop_move ) return;
+	public bool MovePerFrame(Vector3[] path,float deltaTime) {
+		if ( stop_move ) return false;
 		for(int i=0; i < parts.Length; i++ ) {
 			if ( parts[i].MovePerFrame(path,speed,deltaTime) ) {
 				Debug.Log("Part "+ i + " reached the end of path, stop moving ");
 				stop_move = true;
-				return;
+				return false;
 			}
 		}
+		return true;
 	}
 }
 

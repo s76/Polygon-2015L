@@ -39,16 +39,13 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SplineControler\MathUtils.cs" />
-     <Compile Include="Assets\SplineControler\SplineController.cs" />
-     <Compile Include="Assets\SplineControler\SplineInterpolator.cs" />
      <Compile Include="Assets\arap\Scripts\InventoryButtonScript.cs" />
      <Compile Include="Assets\arap\Scripts\InventoryManager.cs" />
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
@@ -61,7 +58,7 @@
      <Compile Include="Assets\s76\TrainEditor.cs" />
      <None Include="Assets\s76\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
