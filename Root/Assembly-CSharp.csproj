@@ -46,13 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraAndMovement\PlayerMovement.cs" />
-     <Compile Include="Assets\CameraAndMovement\RaycastingTest.cs" />
-     <Compile Include="Assets\SplineControler\MathUtils.cs" />
-     <Compile Include="Assets\SplineControler\SplineController.cs" />
-     <Compile Include="Assets\SplineControler\SplineInterpolator.cs" />
-     <Compile Include="Assets\arap\Scripts\InventoryButtonScript.cs" />
-     <Compile Include="Assets\arap\Scripts\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\RaycastingTest.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryButtonScript.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />

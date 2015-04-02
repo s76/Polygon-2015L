@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
-
-public class InventoryManager : MonoBehaviour {
+public class InventoryManager : MonoBehaviour, IPointerExitHandler {
 
 	public GameObject openInventoryButton, closeInventoryButton;
 	public int inventoryRows, inventoryColumns;
@@ -24,16 +24,24 @@ public class InventoryManager : MonoBehaviour {
 		for (int i =0; i<inventoryRows * inventoryColumns; i++) {
 			GameObject b = Instantiate (buttonPrefab);
 			buttons[i] = b;
-			b.GetComponentInChildren<Text> ().text = (i + 1) + "";
+			b.GetComponentInChildren<Text> ().text =  i.ToString();
 		}
 
 		onCloseInventoryButtonClicked ();
+
+
+        buttons[0].GetComponent<InventoryButtonScript>().SetAssociatedItem(new Gun1("jednoreczny 1 ", false));
+        buttons[1].GetComponent<InventoryButtonScript>().SetAssociatedItem(new Gun2("jednoreczny 2", false));
+        buttons[2].GetComponent<InventoryButtonScript>().SetAssociatedItem(new Gun2("dwureczny 1", true));
+        buttons[3].GetComponent<InventoryButtonScript>().SetAssociatedItem(new Gun2("dwureczny 2", true));
 	}
 	
 	public void onShowInventoryButtonClicked(){
 		isInventoryOpened = true;
+        /* odkomentowanie tych 2 linii spowoduje ze bedzie sie pojawial przycisk zamkniecia ekwpinuku
 		closeInventoryButton.gameObject.SetActive (true);
 		openInventoryButton.gameObject.SetActive (false);
+         */
 		inventoryGrid.gameObject.SetActive (true);
 		quickslotPanel.gameObject.SetActive (false);
 
@@ -56,5 +64,20 @@ public class InventoryManager : MonoBehaviour {
 			b.transform.SetParent(quickslotPanel.transform, false);
 		}
 	}
-	
+
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isInventoryOpened = false;
+        closeInventoryButton.gameObject.SetActive(false);
+        openInventoryButton.gameObject.SetActive(true);
+        inventoryGrid.gameObject.SetActive(false);
+        quickslotPanel.gameObject.SetActive(true);
+
+        for (int i = 0; i < inventoryRows; i++)
+        {
+            GameObject b = buttons[i];
+            b.transform.SetParent(quickslotPanel.transform, false);
+        }
+    }
 }
