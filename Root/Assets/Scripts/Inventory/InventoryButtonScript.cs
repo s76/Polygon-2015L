@@ -2,11 +2,12 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
-public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler
+public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     private InventoryBuilder inventoryBuilder;
 	private Item associatedItem;
+    private bool isPointerOverButton;
 
 	void Start () {
         GameObject inventoryPanelObject = GameObject.Find("Inventory Panel");
@@ -20,16 +21,21 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		if (eventData.button == PointerEventData.InputButton.Left) {
+		if (eventData.button == PointerEventData.InputButton.Left && associatedItem != null) {
             inventoryBuilder.AssociateItemToHand(associatedItem, "Left");
 		} else if (eventData.button == PointerEventData.InputButton.Middle) {
-			//Debug.Log ("Middle click");
-		} else if (eventData.button == PointerEventData.InputButton.Right) {
-            inventoryBuilder.AssociateItemToHand(associatedItem, "Right");
-			
+            if (isPointerOverButton && associatedItem != null){
+                inventoryBuilder.RemoveItemFromInventory(this.associatedItem);
+                SetAssociatedItem(null);
+            }
+		} else if (eventData.button == PointerEventData.InputButton.Right && associatedItem != null) {
+            inventoryBuilder.AssociateItemToHand(associatedItem, "Right");		
 		}
 	}
 
+	public bool IsFreeSlot(){
+		return associatedItem == null ? true : false;
+	}
 
     public Item GetAssociatedItem() {
         return associatedItem;
@@ -38,10 +44,23 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler
     //przypisuje obrazek, wskaznik itp.
     public void SetAssociatedItem(Item item) {
         associatedItem = item;
-        if (item != null) { 
+        if (item != null) {
             GetComponentInChildren<Text>().text = item.GetName();
+        }
+        else{
+            GetComponentInChildren<Text>().text = "free";
         }
     }
 
 
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isPointerOverButton = false;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isPointerOverButton = true;
+    }
 }

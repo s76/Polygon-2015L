@@ -159,6 +159,7 @@ GameObject:
   - 33: {fileID: 128838479}
   - 135: {fileID: 128838478}
   - 23: {fileID: 128838477}
+  - 114: {fileID: 128838481}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -216,11 +217,22 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 128838476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.36999989, y: 1.09000003, z: -5.07999992}
+  m_LocalPosition: {x: 2.93000007, y: .479999989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
+--- !u!114 &128838481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128838476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8303b6363c3e68d4385e692cb356648e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &130709422
 Prefab:
   m_ObjectHideFlags: 0
@@ -422,11 +434,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 211370705}
---- !u!1 &219821633
+--- !u!1 &219821633 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 104168, guid: 1622f78312f21f14da30c10aaf54be7a, type: 2}
   m_PrefabInternal: {fileID: 1124791566}
---- !u!224 &219821634
+--- !u!224 &219821634 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22472146, guid: 1622f78312f21f14da30c10aaf54be7a,
     type: 2}
@@ -707,7 +719,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!1 &480287617
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,79 +1001,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!1 &801554076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 801554080}
-  - 33: {fileID: 801554079}
-  - 65: {fileID: 801554078}
-  - 23: {fileID: 801554077}
-  m_Layer: 0
-  m_Name: Cube 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &801554077
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801554076}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &801554078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801554076}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &801554079
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801554076}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &801554080
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801554076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .300000012, y: 1.78999996, z: 4.67000008}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!1 &842356975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,11 +1154,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 845847345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.18549562, y: 0, z: -5.51457787}
+  m_LocalPosition: {x: 2.20000005, y: 0, z: -4.5999999}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
 --- !u!54 &845847350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1441,11 +1380,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22472146, guid: 1622f78312f21f14da30c10aaf54be7a, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 147
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 22472146, guid: 1622f78312f21f14da30c10aaf54be7a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 49.5
       objectReference: {fileID: 0}
     - target: {fileID: 22472146, guid: 1622f78312f21f14da30c10aaf54be7a, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1540,7 +1479,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 408, y: -69.4999847}
+  m_AnchoredPosition: {x: 408, y: -69.5000229}
   m_SizeDelta: {x: 816, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1129479492
@@ -1581,316 +1520,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xF3j by\u0142y wsp\xF3\u0142lokator, dalszy kuzyn: \r\n- pra\u0142 w
-    zlewie wielokrotnie jednorazowe, nas\u0105czane chusteczki (takie jak dla bobas\xF3w,
-    kupowane w biedrze, u\u017Cywa\u0142 ich do przemywania \"buziuni, r\u0105czek\"
-    po jedzeniu) \r\n- pra\u0142 skarpety i majty w zlewie, wiesza\u0142 wsz\u0119dzie
-    tam, gdzie by\u0142y grzejniki; je\u015Bli dodam, \u017Ce maj\u0105c na my\u015Bli
-    \"pra\u0142\" nie u\u017Cywa\u0142 proszku, tylko czasem odrobin\u0119 myd\u0142a,
-    to macie pe\u0142en obraz jak przypuszczalnie mog\u0142o to jeba\u0107 \r\n- po
-    gotowaniu ry\u017Cu, kaszy: wod\u0119 z gara albo wypija\u0142 (bo bardzo zdrowe,
-    mama m\xF3wi\u0142a), albo wrzuca\u0142 cokolwiek, \u017Ceby zrobi\u0107 na tym
-    ultra rozwodnion\u0105 zupo-podobne danie i zje\u015B\u0107 \r\n- 1 torebka od
-    herbaty starcza\u0142a na 4-5-6 du\u017Cych szklanek, jak mia\u0142 by wyrzuci\u0107,
-    to robi\u0142 na zapas par\u0119 szklanek na p\xF3\u017Aniej i jedn\u0105 mi podtyka\u0142,
-    je\u015Bli nie m\xF3g\u0142 wypi\u0107 \r\n- wyjmowa\u0142 myd\u0142o z mydelniczki,
-    odk\u0142ada\u0142 obok i wylewa\u0142 na d\u0142o\u0144 albo palcem zbiera\u0142
-    zawarto\u015B\u0107 mydelniczki, bo si\u0119 myd\u0142o tak marnuje a szkoda mu
-    \r\n- stawia\u0142 budzik przed sob\u0105, bo po 22 co drugi, trzeci dzie\u0144
-    musia\u0142 dzwoni\u0107 do mame, zdawa\u0107 raport ze studiuf, mie\u015Bci\u0142
-    si\u0119 poni\u017Cej minuty i czasem roz\u0142\u0105cza\u0142 bez papa, buzi
-    \r\n- przyni\xF3s\u0142 kiedy\u015B 7 baniak\xF3w 5 litrowych, pustych; nape\u0142ni\u0142
-    je i powiedzia\u0142, \u017Ce on na dzie\u0144 max u\u017Cyje 1 i starczy na tydzie\u0144,
-    bo on wod\u0119 tak oszcz\u0119dza, a jak ja chce wi\u0119cej p\u0142aci\u0107
-    to moja sprawa; i chodzi\u0142 z tym baniakiem nawet do kibla spuszcza\u0107 po
-    sobie wod\u0119, a po miesi\u0105cu dok\u0142adne wyliczenia pod kresk\u0105 mi
-    zostawi\u0142 do rachunku \r\n- non stop kupowa\u0142 jebany TWAR\xD3G, bo mama
-    ka\u017Ce uzupe\u0142nia\u0107 diet\u0119 w bia\u0142ko, nie by\u0142o dnia bez
-    kostki 200g \u015Bmierdz\u0105cego twarogu, kt\xF3rego kupowa\u0142 zapas na tydzie\u0144
-    i smrodzi\u0142 nim lod\xF3wk\u0119 \r\n- apropos lod\xF3wki - wykr\u0119ci\u0142
-    \u017Car\xF3wk\u0119 i schowa\u0142, bo niepotrzebnie \"pr\u0105d bierze\", na
-    wiecz\xF3r zim\u0105 \u015Bwieci\u0142em sobie w lod\xF3wce diod\u0105 od paska
-    do kluczy albo kom\xF3rk\u0105 \r\n- apropos kom\xF3rki - mia\u0142 jakiego\u015B
-    starocia i wstydzi\u0142 si\u0119 go jak chuj, ale zawsze chwali\u0142, \u017Ce
-    on ma tak\u0105 co bateria starcza na ~18 dni bez \u0142adowania \r\n- zaprosi\u0142
-    raz zjeban\u0105 jak on loszk\u0119 do siebie, ona u niego w pokoju, on ze mn\u0105
-    w kuchni; patrz\u0119 co robi: herbata rozcie\u0144czona, stare nieodpakowane
-    dra\u017Ce (widocznie na specjaln\u0105 okazj\u0119) i odgrzewana niby-zupa kt\xF3ra
-    cholera wie ile sta\u0142a w lod\xF3wce \r\n- znosi\u0142 z targu mas\u0119 prawie
-    zgni\u0142ych warzyw, nie mych ich, robi\u0142 sa\u0142atki na par\u0119 dni,
-    wspomina\u0142em mo\u017Ce jak to i jego inne dzie\u0142a kulinarne jeba\u0142y
-    w lod\xF3wce i kuchni? \r\n- a, wsz\u0119dzie wiesza\u0142 u\u017Cywane r\u0119czniki,
-    na ka\u017Cdych kurwa drzwiach \r\nKURWA, JAK JA SI\u0118 CIESZ\u0118, \u017BE
-    JU\u017B Z NIM NIE MIESZKAM JA PIEDOLE MUSIA\u0141EM TO Z SIEBIE WYRZUCI\u0106"
+  m_Text: 
 --- !u!222 &1129479494
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1129479490}
---- !u!1 &1267592910
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1267592914}
-  - 33: {fileID: 1267592913}
-  - 65: {fileID: 1267592912}
-  - 23: {fileID: 1267592911}
-  m_Layer: 0
-  m_Name: Cube 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1267592911
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1267592910}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &1267592912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1267592910}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1267592913
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1267592910}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1267592914
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1267592910}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.59000015, y: 1.83000004, z: 4.67000008}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!1 &1316591112
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1316591116}
-  - 33: {fileID: 1316591115}
-  - 65: {fileID: 1316591114}
-  - 23: {fileID: 1316591113}
-  m_Layer: 0
-  m_Name: Cube 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1316591113
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1316591112}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &1316591114
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1316591112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1316591115
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1316591112}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1316591116
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1316591112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.01000023, y: 1.78999996, z: 5.36999989}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!1 &1402007401
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1402007405}
-  - 33: {fileID: 1402007404}
-  - 65: {fileID: 1402007403}
-  - 23: {fileID: 1402007402}
-  m_Layer: 0
-  m_Name: Cube 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1402007402
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402007401}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &1402007403
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402007401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1402007404
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402007401}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1402007405
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402007401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.46000004, y: 1.78999996, z: -.330000013}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
---- !u!1 &1570261672
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1570261674}
-  - 114: {fileID: 1570261673}
-  m_Layer: 0
-  m_Name: InventoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1570261673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1570261672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc38390534bb04459f705d953d2199f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1570261674
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1570261672}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.9930077, y: 16.2757378, z: 13.2838802}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
---- !u!1 &1656686329
+--- !u!1 &1656686329 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 104168, guid: 1622f78312f21f14da30c10aaf54be7a, type: 2}
   m_PrefabInternal: {fileID: 130709422}
---- !u!224 &1656686330
+--- !u!224 &1656686330 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22472146, guid: 1622f78312f21f14da30c10aaf54be7a,
     type: 2}
@@ -1998,7 +1639,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!1 &1851845890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +1759,7 @@ Transform:
   m_LocalScale: {x: 2, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
 --- !u!114 &1857003036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2159,6 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128c412ba1b56d54d8ccefc16dc0b0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpMessage: 
   inventoryBuilderObject: {fileID: 842356975}
 --- !u!1 &1954290610
 GameObject:
@@ -2170,6 +1812,7 @@ GameObject:
   - 224: {fileID: 1954290611}
   - 222: {fileID: 1954290613}
   - 114: {fileID: 1954290612}
+  - 114: {fileID: 1954290614}
   m_Layer: 5
   m_Name: Info Panel
   m_TagString: Untagged
@@ -2222,6 +1865,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1954290610}
+--- !u!114 &1954290614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954290610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389b54d94999b1b468db929b636f4b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1991800251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,8 +1950,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 76890859}
   m_HandleRect: {fileID: 76890858}
   m_Direction: 2
-  m_Value: .499999732
-  m_Size: .320610106
+  m_Value: 1
+  m_Size: .999999821
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

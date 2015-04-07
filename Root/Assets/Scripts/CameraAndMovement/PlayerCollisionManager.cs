@@ -13,7 +13,13 @@ public class PlayerCollisionManager : MonoBehaviour {
     void OnTriggerStay(Collider other) {
         if (other.tag == "Item") {
             if (Input.GetButton("Use")) {
-                Debug.Log("podnies");
+				GameObject itemObject = other.transform.gameObject;
+                ItemScript itemScript= other.GetComponentInParent<ItemScript>();
+				bool wasItemPickedUp = inventoryBuilder.AddItemToInventory(itemObject);
+				if(wasItemPickedUp){
+                    other.transform.parent = transform; //przedmiot ma isc za graczem?
+					InfoPanelManager.AddNewMessage(Strings.pickUpItem + itemScript.GetItem().GetName());
+				}
             }
         }
 
