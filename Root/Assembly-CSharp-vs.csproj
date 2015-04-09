@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +53,9 @@
      <Compile Include="Assets\Scripts\Inventory\InventoryBuilder.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryButtonScript.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemScript.cs" />
+     <Compile Include="Assets\Scripts\Inventory\tmp_script\AbsItem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\tmp_script\Items\Axe.cs" />
+     <Compile Include="Assets\Scripts\Inventory\tmp_script\Player.cs" />
      <Compile Include="Assets\Scripts\Strings.cs" />
      <Compile Include="Assets\Scripts\UI\InfoPanelManager.cs" />
      <Compile Include="Assets\Train_Assets\C#_Script\Break_Joint.cs" />
@@ -70,7 +73,7 @@
      <Compile Include="Assets\s76\TrainEditor.cs" />
      <None Include="Assets\s76\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

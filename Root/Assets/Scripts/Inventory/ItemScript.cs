@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ItemScript : MonoBehaviour{
@@ -11,6 +11,7 @@ public class ItemScript : MonoBehaviour{
 	void Start(){
 		this.item = new Gun1 ("przedmiot dwureczny", true);
 	}
+
 	public Item GetItem(){
 		return item;
 	}
