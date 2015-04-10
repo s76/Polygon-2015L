@@ -18,11 +18,11 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
     private List<GameObject> pickedUpObjects;
 
 	void Start () {
-		leftHand = GameObject.Find("LeftHand");
-		rightHand = GameObject.Find("RightHand");
+		leftHand = GameObject.Find("LeftHandIcon");
+		rightHand = GameObject.Find("RightHandIcon");
 		
 		if (leftHand == null || rightHand == null) {
-			throw new UnassignedReferenceException("left or right hand object is missing");
+			throw new UnassignedReferenceException("left or right hand icon object is missing");
 		}
 		
 		isInventoryOpened = false;
@@ -88,7 +88,7 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
 		}
 	}
 
-	public void AssociateItemToHand(Item item, string whichHand) {
+	public void AssociateItemToHand(AbsItem item, string whichHand) {
 		GameObject handToAssociate;
 		if (whichHand.Equals("Left")) {
 			handToAssociate = leftHand;
@@ -156,9 +156,8 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
 		if (freeButton == null)
 			return false;
 
-        ItemScript itemScript = itemObject.GetComponent<ItemScript>();
-		freeButton.GetComponent<InventoryButtonScript> ().SetAssociatedItem (itemScript.GetItem());
-        itemScript.DisableAsPhysicalObject();
+        AbsItem item = itemObject.GetComponent<AbsItem>();
+		freeButton.GetComponent<InventoryButtonScript> ().SetAssociatedItem (item);
         pickedUpObjects.Add(itemObject);
 		return true;
 	}
@@ -172,7 +171,7 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
 		return null;
 	}
 
-    public void RemoveItemFromInventory(Item item){
+    public void RemoveItemFromInventory(AbsItem item){
         InfoPanelManager.AddNewMessage(Strings.dropItem + item.GetName());
 
         if (leftHand.GetComponent<InventoryButtonScript>().GetAssociatedItem() == item) {
@@ -184,8 +183,8 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
         }
 
         foreach (GameObject itemObject in pickedUpObjects){
-            if (itemObject.GetComponent<ItemScript>().GetItem() == item){
-                itemObject.GetComponent<ItemScript>().EnableAsPhysicalObject();
+            if (itemObject.GetComponent<AbsItem>() == item){
+                itemObject.GetComponent<AbsItem>().OnBeingThrowed();
                 itemObject.transform.SetParent(null, true);
                 pickedUpObjects.Remove(itemObject);
                 return;
@@ -193,4 +192,15 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
         }
     }
 
+    public void UseLeftHandItem() {
+        if (leftHand.GetComponent<InventoryButtonScript>().GetAssociatedItem() != null) {
+            leftHand.GetComponent<InventoryButtonScript>().GetAssociatedItem().OnBeingUsed();
+        }
+    }
+
+    public void UseRightHandItem() {
+        if (rightHand.GetComponent<InventoryButtonScript>().GetAssociatedItem() != null) {
+            rightHand.GetComponent<InventoryButtonScript>().GetAssociatedItem().OnBeingUsed();
+        }
+    }
 }

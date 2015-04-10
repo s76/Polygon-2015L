@@ -6,7 +6,7 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPoint
 {
 
     private InventoryBuilder inventoryBuilder;
-	private Item associatedItem;
+	private AbsItem associatedItem;
     private bool isPointerOverButton;
 
 	void Start () {
@@ -37,12 +37,12 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPoint
 		return associatedItem == null ? true : false;
 	}
 
-    public Item GetAssociatedItem() {
+    public AbsItem GetAssociatedItem() {
         return associatedItem;
     }
 
     //przypisuje obrazek, wskaznik itp.
-    public void SetAssociatedItem(Item item) {
+    public void SetAssociatedItem(AbsItem item) {
         associatedItem = item;
         if (item != null) {
             GetComponentInChildren<Text>().text = item.GetName();
