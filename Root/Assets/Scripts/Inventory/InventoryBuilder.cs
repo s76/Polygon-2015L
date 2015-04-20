@@ -100,7 +100,6 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
 			throw new ArgumentException("Allowed arguments: 'Left', 'Right'");
 		}
 
-
 		InventoryButtonScript leftHandScript = leftHand.GetComponent<InventoryButtonScript>();
 		InventoryButtonScript rightHandScript = rightHand.GetComponent<InventoryButtonScript>();
 		

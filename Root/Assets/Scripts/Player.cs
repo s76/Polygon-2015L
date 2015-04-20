@@ -27,9 +27,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    
-
     void OnTriggerStay(Collider other) {
+		Debug.Log ("Colliding with item");
         if (other.tag == "Item") {
             if (Input.GetButton("Use")) {
                 GameObject itemObject = other.transform.gameObject;

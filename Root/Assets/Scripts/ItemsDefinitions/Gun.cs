@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 
-public class Axe : AbsItem
+public class Gun : AbsGunItem
 {
 	public float rotateSpeed = 20;
 	bool swing;
 	Animator animator;
 
-    public  Axe() : base("Axe", false) { } 
+    public  Gun() : base("Gun", false) { } 
 
 	void Start () {
 		animator = GetComponent<Animator>();
@@ -19,9 +19,8 @@ public class Axe : AbsItem
 
 	public override void OnBeingPicked ()
 	{
-		Debug.Log("axe picked");
-		transform.parent = Player.Instance.leftHand;
-		transform.localPosition = Vector3.zero;
+		Debug.Log("gun picked");
+		transform.localPosition = INVENTORY_LOCATION;
 		transform.localRotation = Quaternion.identity;
 
         //GetComponent<SphereCollider>().enabled = false;
@@ -30,7 +29,7 @@ public class Axe : AbsItem
 
 	public override void OnBeingThrowed ()
 	{
-		Debug.Log("axe throwed");
+		Debug.Log("gun throwed");
         // GetComponent<SphereCollider>().enabled = true;
         // GetComponent<MeshRenderer>().enabled = true;
 	}
