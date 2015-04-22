@@ -9,6 +9,7 @@ public class Drive_Wheel_Self_Accelerate : MonoBehaviour {
 	public float Accelerate_Rate = 300.0f ;
 	public float Brake_Drag = 5.0f ;
 	public float Idle_Drag = 0.1f ;
+	public float maxAngularVelocity = 50.0f ;
 
 	Rigidbody This_RigidBody ;
 	float Target_Torque ;
@@ -16,7 +17,7 @@ public class Drive_Wheel_Self_Accelerate : MonoBehaviour {
 
 	void Start () {
 		This_RigidBody = this.GetComponent<Rigidbody>() ;
-		This_RigidBody.maxAngularVelocity = 50.0f ;
+		This_RigidBody.maxAngularVelocity = maxAngularVelocity;
 		This_RigidBody.angularDrag = Idle_Drag ;
 		// Layer settings.
 		this.gameObject.layer = 8 ;
