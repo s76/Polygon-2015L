@@ -5,7 +5,7 @@ public class Break_Joint : MonoBehaviour {
 
 	Transform This_Transform ;
 
-	void Start () {
+	void Start () { 
 		This_Transform = this.transform ;
 	}
 	

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems; 
 using System; 
 
-public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  { 
+public class InventoryBuilder2 : MonoBehaviour, IPointerExitHandler  { 
 	
 	public GameObject openInventoryButton, closeInventoryButton; 
 	public int inventoryRows, inventoryColumns;

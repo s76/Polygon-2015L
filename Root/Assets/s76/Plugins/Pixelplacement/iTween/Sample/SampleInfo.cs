@@ -10,7 +10,7 @@ void OnGUI(){
 		if(GUILayout.Button("http://itween.pixelplacement.com")){
 			Application.OpenURL("http://itween.pixelplacement.com");
 		}
-		GUILayout.EndHorizontal();
+		GUILayout.EndHorizontal(); 
 	}
 }
 

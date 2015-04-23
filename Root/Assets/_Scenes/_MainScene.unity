@@ -2338,9 +2338,9 @@ GameObject:
   - 4: {fileID: 238259238}
   - 135: {fileID: 238259244}
   - 23: {fileID: 238259243}
-  - 114: {fileID: 238259242}
   - 65: {fileID: 238259239}
   - 95: {fileID: 238259241}
+  - 114: {fileID: 238259240}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Item
@@ -2355,7 +2355,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238259237}
   m_LocalRotation: {x: -.0752516389, y: 0, z: 0, w: .997164607}
-  m_LocalPosition: {x: 0, y: 3.1500001, z: -9.52999973}
+  m_LocalPosition: {x: -7.30000019, y: 3.20000005, z: 43.0999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1733483412}
@@ -2374,7 +2374,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: .300000012, y: 1.07000005, z: 3.08999991}
-  m_Center: {x: 0, y: -.379999995, z: 1.30999994}
+  m_Center: {x: 0, y: -.389999986, z: 1.30999994}
+--- !u!114 &238259240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238259237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8391f1c78d5cf4c47b91e014bd4299f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 20
 --- !u!95 &238259241
 Animator:
   serializedVersion: 3
@@ -2393,19 +2405,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &238259242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400922, guid: b02333377223c124ebf614b4a4c39a21,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 238259237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8391f1c78d5cf4c47b91e014bd4299f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 67
 --- !u!23 &238259243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2415,7 +2414,7 @@ MeshRenderer:
   m_GameObject: {fileID: 238259237}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 0}
   m_SubsetIndices: 
@@ -3532,7 +3531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 842356977}
+      - m_Target: {fileID: 0}
         m_MethodName: onCloseInventoryButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -6132,7 +6131,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 842356977}
+      - m_Target: {fileID: 0}
         m_MethodName: onShowInventoryButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -9651,7 +9650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 842356975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a034bc26f4fc8044b5e2a99cca8c2e1, type: 3}
+  m_Script: {fileID: 11500000, guid: ce33d9b21fb88484abc5f19a8b83821e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openInventoryButton: {fileID: 572195153}
@@ -22642,6 +22641,7 @@ GameObject:
   - 4: {fileID: 2120895565}
   - 33: {fileID: 2120895567}
   - 23: {fileID: 2120895566}
+  - 65: {fileID: 2120895568}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -22694,6 +22694,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120895564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &2120895568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2120895564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.00000012, z: 1}
+  m_Center: {x: 0, y: 7.15255737e-07, z: 0}
 --- !u!1 &2121899561
 GameObject:
   m_ObjectHideFlags: 0

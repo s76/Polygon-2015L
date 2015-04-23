@@ -11,9 +11,9 @@ public class Axe : AbsItem
 
 	void Start () {
 		animator = GetComponent<Animator>();
-	}
+	} 
 
-	public override void OnBeingPicked ()
+	public override void OnBeingPicked () 
 	{
 		Debug.Log("axe picked");
 		transform.parent = Player.Instance.leftHand;

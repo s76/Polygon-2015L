@@ -3,7 +3,7 @@
 public class Shooting : MonoBehaviour
 {
 	public KeyCode fire;
-	
+	  
 	public int damagePerShot = 20;
 	public float timeBetweenBullets = 0.15f;
 	public float range = 100f;

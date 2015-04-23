@@ -5,9 +5,9 @@ public class MovableOnPath : MonoBehaviour
 {
 	int current;
 	float frag_len;
-
+	 
 	void Start () {
-		Reset();
+		Reset(); 
 	}
 
 	public void Reset() {

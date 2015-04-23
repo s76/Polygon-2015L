@@ -5,7 +5,7 @@ public class Drive_Wheel : MonoBehaviour {
 
 	public bool Drive_Flag = true ;
 	public float Max_Torque = 800.0f ;
-	public float Accelerate_Rate = 200.0f ;
+	public float Accelerate_Rate = 200.0f ; 
 	public float Brake_Drag = 5.0f ;
 	public float Idle_Drag = 0.1f ;
 

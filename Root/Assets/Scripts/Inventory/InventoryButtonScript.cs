@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using System;
+using UnityEngine.UI;  
+using System; 
 public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
-{
+{ 
 
-    private InventoryBuilder inventoryBuilder;
+	private InventoryBuilder2 inventoryBuilder;
 	private AbsItem associatedItem;
     private bool isPointerOverButton;
 
@@ -15,7 +15,7 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPoint
             throw new UnassignedReferenceException("inventory builder object missing");
         }
 
-        inventoryBuilder = inventoryPanelObject.GetComponent<InventoryBuilder>();
+		inventoryBuilder = inventoryPanelObject.GetComponent<InventoryBuilder2>();
 	}
 
 

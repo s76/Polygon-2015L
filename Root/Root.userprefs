@@ -1,12 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inventory\InventoryBuilder.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inventory\InventoryBuilder2.cs">
     <Files>
-      <File FileName="..\..\Train Job 2\Polygon-2015L\Root\Assets\Scripts\Player.cs" Line="10" Column="45" />
-      <File FileName="Assets\Scripts\Inventory\InventoryButtonScript.cs" Line="12" Column="17" />
-      <File FileName="Assets\Scripts\UI\InfoPanelManager.cs" Line="10" Column="46" />
-      <File FileName="Assets\Scripts\Inventory\InventoryBuilder.cs" Line="16" Column="41" />
-      <File FileName="Assets\Scripts\Player.cs" Line="16" Column="2" />
+      <File FileName="Assets\Scripts\Inventory\InventoryBuilder2.cs" Line="21" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

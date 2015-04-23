@@ -5,10 +5,10 @@ using System.Collections;
  * próba poprawienia ItemScript.cs 
  */ 
 public abstract class AbsItem : MonoBehaviour
-{
+{ 
     protected bool isDoubleHanded;
     protected string itemName;
-
+	 
 	abstract public void OnBeingPicked ();
 	abstract public void OnBeingThrowed ();
 	abstract public void OnBeingUsed ();

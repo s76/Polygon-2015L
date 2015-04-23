@@ -4,10 +4,10 @@ using System.Collections;
 public class MotorMovement : MonoBehaviour 
 {
 	public Rigidbody objectBody;
-	private float sineSeed = 0.0f;
+	private float sineSeed = 0.0f; 
 	private float rotationSeed = 0.0f;
 	private float vehicleRotationFactor = 0.0f;
-	private float vehicleAccelerationFactor = 0.0f;
+	private float vehicleAccelerationFactor = 0.0f; 
 
 	// Use this for initialization
 	void Start () 
