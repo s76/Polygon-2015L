@@ -2402,10 +2402,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 238259237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e0d0673c38d084482b958384e02d85, type: 3}
+  m_Script: {fileID: 11500000, guid: 8391f1c78d5cf4c47b91e014bd4299f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 50
+  rotateSpeed: 67
 --- !u!23 &238259243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9651,13 +9651,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 842356975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64ee3cdc5de1b5a42a1e37283aea17dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a034bc26f4fc8044b5e2a99cca8c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openInventoryButton: {fileID: 572195153}
   closeInventoryButton: {fileID: 343780432}
   inventoryRows: 2
-  inventoryColumns: 3
+  inventoryColumns: 2
   buttonPrefab: {fileID: 104168, guid: 1622f78312f21f14da30c10aaf54be7a, type: 2}
   inventoryGrid: {fileID: 211370705}
   quickslotPanel: {fileID: 2084857205}
@@ -20054,7 +20054,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825052614}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -20115,12 +20115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1825052614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46df3dae3dff2dd4d89f8b9368095222, type: 3}
+  m_Script: {fileID: 11500000, guid: 0acafb9b2762c684a8d48f2a835ed9ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpRange: 0
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
+  pickUpRange: 5
+  leftHand: {fileID: 337757202}
+  rightHand: {fileID: 115417109}
   inventoryBuilderObject: {fileID: 842356975}
 --- !u!1 &1832756201
 GameObject:
