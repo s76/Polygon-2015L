@@ -30,7 +30,6 @@ GameObject:
   - 114: {fileID: 11400922}
   - 65: {fileID: 6577980}
   - 95: {fileID: 9595102}
-  - 114: {fileID: 11436738}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Item
@@ -244,21 +243,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 154442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: d3e0d0673c38d084482b958384e02d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11436738
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8391f1c78d5cf4c47b91e014bd4299f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 90
+  rotateSpeed: 50
 --- !u!135 &13555878
 SphereCollider:
   m_ObjectHideFlags: 1
