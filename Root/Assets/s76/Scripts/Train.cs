@@ -6,9 +6,9 @@ public class Train : MonoBehaviour
 	public MovableOnPath[] parts;
 	public float speed;
 	public float offset;
-	bool stop_move;
+	bool stop_move; 
 
-	public void ReplaceParts () {
+	public void ReplaceParts () { 
 		for(int i =1; i < parts.Length; i++ ) {
 			var p = parts[i-1].transform.position;
 			parts[i].transform.position = new Vector3(p.x, p.y,p.z - offset);

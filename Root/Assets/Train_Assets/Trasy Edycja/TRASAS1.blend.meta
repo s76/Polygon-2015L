@@ -4,7 +4,21 @@ timeCreated: 1428509825
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: Rail_Bevel_Shape
+    100002: Trasa_Beizer
+    100004: //RootNode
+    400000: Rail_Bevel_Shape
+    400002: Trasa_Beizer
+    400004: //RootNode
+    2300000: Rail_Bevel_Shape
+    2300002: Trasa_Beizer
+    3300000: Rail_Bevel_Shape
+    3300002: Trasa_Beizer
+    4300000: Rail_Bevel_Shape
+    4300002: Trasa_Beizer
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

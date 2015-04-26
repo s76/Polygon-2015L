@@ -4,7 +4,7 @@ using System.Collections;
 public class Camera_Distance : MonoBehaviour {
 
 	Transform This_Transform ;
-
+	 
 	void Start () {
 		This_Transform = this.transform ;
 	}

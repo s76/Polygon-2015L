@@ -2,12 +2,12 @@ using UnityEngine;
 using System.Collections;
 
 public class RaycastingTest : MonoBehaviour
-{
+{ 
 	
 	static Plane XZPlane = new Plane(Vector3.up, Vector3.zero);
 
 	// Use this for initialization
-	void Start ()
+	void Start () 
 	{
 		if (Input.GetMouseButton (1)) {
 			Vector3 target = GetMousePositionOnXZPlane ();

@@ -6,7 +6,7 @@ public class Camera_Rotation : MonoBehaviour {
 	Transform This_Transform ;
 	float Angle_Y ;
 	float Angle_Z ;
-	float Temp_Horizontal ;
+	float Temp_Horizontal ; 
 	float Temp_Vertical ;
 	Vector2 Last_Mouse_Pos ;
 

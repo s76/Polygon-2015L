@@ -15,9 +15,9 @@ public class Axe : AbsItem
 
 	void Start () {
 		animator = GetComponent<Animator>();
-	}
+	} 
 
-	public override void OnBeingPicked ()
+	public override void OnBeingPicked () 
 	{
 		Debug.Log ("Axe picked");
 		PutOutOfSight();

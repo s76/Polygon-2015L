@@ -6,10 +6,10 @@ public class Path : MonoBehaviour {
 	public Train train;
 	public Transform[] points;
 	public int resolution;
-	public float progress_step;
+	public float progress_step; 
 
 	Vector3[] genPath;
-	bool moving;
+	bool moving; 
 
 	void OnGUI () {
 		if ( GUILayout.Button("Analize") ) {
