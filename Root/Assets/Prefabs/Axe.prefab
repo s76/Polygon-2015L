@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 476546}
   - 135: {fileID: 13555878}
   - 23: {fileID: 2382578}
-  - 114: {fileID: 11400922}
   - 65: {fileID: 6577980}
   - 95: {fileID: 9595102}
   - 114: {fileID: 11436738}
@@ -236,17 +235,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11400922
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11436738
 MonoBehaviour:
   m_ObjectHideFlags: 1

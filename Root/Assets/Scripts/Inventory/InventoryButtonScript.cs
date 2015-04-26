@@ -24,18 +24,15 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPoint
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		//to add: if item is doublehanded
 		if (eventData.button == PointerEventData.InputButton.Left && associatedItem != null) {
-            inventoryBuilder.AssociateItemToHand(associatedItem, "Left");
-			associatedItem.OnBeingAssociatedToHand("Left");
+            inventoryBuilder.AssociateItemToHand(associatedItem, InventoryBuilder.LEFT);
 		} else if (eventData.button == PointerEventData.InputButton.Middle) {
             if (isPointerOverButton && associatedItem != null){
                 inventoryBuilder.RemoveItemFromInventory(this.associatedItem);
                 SetAssociatedItem(null);
             }
 		} else if (eventData.button == PointerEventData.InputButton.Right && associatedItem != null) {
-            inventoryBuilder.AssociateItemToHand(associatedItem, "Right");
-			associatedItem.OnBeingAssociatedToHand("Right");
+			inventoryBuilder.AssociateItemToHand(associatedItem, InventoryBuilder.RIGHT);
 		}
 	}
 
@@ -57,8 +54,6 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPoint
             GetComponentInChildren<Text>().text = "free";
         }
     }
-
-
 
     public void OnPointerExit(PointerEventData eventData)
     {

@@ -7,62 +7,51 @@ using System;
 
 public class Gun : AbsGunItem
 {
-	public float rotateSpeed = 20;
-	bool swing;
-	Animator animator;
+	private GameObject leftHand;
+	private GameObject rightHand;
 
-    public  Gun() : base("Gun", false) { } 
-
+    public  Gun() : base("Gun", false, 20, 0.15f, 250.0f) { } 
+	
 	void Start () {
-		animator = GetComponent<Animator>();
+		leftHand = GameObject.Find("LeftHandIcon");
+		rightHand = GameObject.Find("RightHandIcon");
 	}
 
 	public override void OnBeingPicked ()
 	{
-		Debug.Log("gun picked");
-		transform.localPosition = INVENTORY_LOCATION;
-		transform.localRotation = Quaternion.identity;
-
+		PutOutOfSight ();
         //GetComponent<SphereCollider>().enabled = false;
        // GetComponent<MeshRenderer>().enabled = false;
 	}
 
-	public override void OnBeingThrowed ()
+	public override void OnBeingThrown ()
 	{
-		Debug.Log("gun throwed");
+		armed = false;
+		ThrowAway ();
         // GetComponent<SphereCollider>().enabled = true;
         // GetComponent<MeshRenderer>().enabled = true;
 	}
 
 	public override void OnBeingAssociatedToHand(string hand)
 	{
-		transform.localPosition = Vector3.zero;
-		transform.localRotation = Quaternion.identity;
-		if(hand.Equals("Left")){
-			Debug.Log("gun to left hand");
-			transform.parent = Player.Instance.leftHand;
-		} else if (hand.Equals("Right")){
-			Debug.Log("gun to right hand");
-			transform.parent = Player.Instance.rightHand;
-		} else {
-			throw new ArgumentException("Allowed arguments: 'Left', 'Right'");
-		}
+		armed = true;
+		PutInHand(hand);
+		//Vector3 rotation = transform.eulerAngles;
+		//rotation.x = 90.0f;
+		//transform.eulerAngles = rotation;
+	}
+	
+	public override void OnBeingRemovedFromHand(){
+		armed = false;
+		PutOutOfSight();
 	}
 
 	public override void OnBeingUsed ()
 	{
-		if (!swing ) {
-			swing = true;
-			animator.SetBool("swing",swing);
-		}
 	}
 
 	public override void OnBeingNotUsed ()
 	{
-		if (!swing ) return;
-		swing = false;
-		animator.SetBool("swing",swing);
-		transform.localRotation = Quaternion.identity;
 	}
 	
 }

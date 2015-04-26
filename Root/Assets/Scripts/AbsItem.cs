@@ -12,8 +12,9 @@ public abstract class AbsItem : MonoBehaviour
     protected string itemName;
 
 	abstract public void OnBeingPicked ();
-	abstract public void OnBeingThrowed ();
+	abstract public void OnBeingThrown ();
 	abstract public void OnBeingAssociatedToHand (string hand);
+	abstract public void OnBeingRemovedFromHand ();
 	abstract public void OnBeingUsed ();
 	abstract public void OnBeingNotUsed ();
 
@@ -29,5 +30,32 @@ public abstract class AbsItem : MonoBehaviour
     public string GetName() {
         return itemName;
     }
+
+	protected void PutInHand(string hand){
+		if (hand.Equals (InventoryBuilder.LEFT)) {
+			transform.parent = Player.Instance.leftHand;
+		} else if (hand.Equals (InventoryBuilder.RIGHT)) {
+			transform.parent = Player.Instance.rightHand;
+		} 
+		transform.localPosition = Vector3.zero;
+		transform.localRotation = Quaternion.identity;
+		transform.localScale = Vector3.one;
+	}
+
+	protected void PutOutOfSight(){
+		transform.parent = null;
+		transform.localPosition = INVENTORY_LOCATION;
+		transform.localRotation = Quaternion.identity;
+		transform.localScale = Vector3.one;
+		//Debug.Log (transform.localScale);
+	}
+
+	protected void ThrowAway(){
+		transform.localPosition = Vector3.zero;
+		transform.localRotation = Quaternion.identity;
+		transform.localScale = Vector3.one;
+		transform.parent = null;
+		//Debug.Log (transform.localScale);
+	}
 }
 

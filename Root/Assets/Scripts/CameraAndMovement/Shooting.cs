@@ -6,7 +6,7 @@ public class Shooting : MonoBehaviour
 	
 	public int damagePerShot = 20;
 	public float timeBetweenBullets = 0.15f;
-	public float range = 100f;
+	public float range = 500f;
 	
 	
 	float timer;
@@ -73,14 +73,15 @@ public class Shooting : MonoBehaviour
 		
 		shootRay.origin = transform.position;
 		shootRay.direction = transform.forward;
-		
+
 		if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
 		{
-			/*EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
-			if(enemyHealth != null)
+			Debug.Log("Hostile inbound!");
+			AbsHostile hostile = shootHit.collider.GetComponent<AbsHostile>();
+			if(hostile != null)
 			{
-				enemyHealth.TakeDamage (damagePerShot, shootHit.point);
-			}*/
+				hostile.TakeDamage (damagePerShot);
+			}
 			gunLine.SetPosition (1, shootHit.point);
 		}
 		else

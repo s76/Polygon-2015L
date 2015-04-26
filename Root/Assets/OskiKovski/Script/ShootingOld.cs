@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class ShootingOld : MonoBehaviour
 {
 	public KeyCode fire;
 	
