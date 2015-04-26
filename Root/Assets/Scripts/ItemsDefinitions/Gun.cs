@@ -5,59 +5,49 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 
-public class Axe : AbsItem
+public class Gun : AbsGunItem
 {
-	public float rotateSpeed = 50;
-	bool swing;
-	Animator animator;
-
-    public  Axe() : base("Axe", false) { } 
-
+    public  Gun() : base("Gun", false, 20, 0.15f, 250.0f) { } 
+	
 	void Start () {
-		animator = GetComponent<Animator>();
-	} 
 
-	public override void OnBeingPicked () 
+	}
+
+	public override void OnBeingPicked ()
 	{
-		Debug.Log ("Axe picked");
-		PutOutOfSight();
+		PutOutOfSight ();
         //GetComponent<SphereCollider>().enabled = false;
        // GetComponent<MeshRenderer>().enabled = false;
 	}
 
 	public override void OnBeingThrown ()
 	{
-		Debug.Log("Axe throwed");
-		ThrowAway();
+		armed = false;
+		ThrowAway ();
         // GetComponent<SphereCollider>().enabled = true;
         // GetComponent<MeshRenderer>().enabled = true;
 	}
 
 	public override void OnBeingAssociatedToHand(string hand)
 	{
+		armed = true;
 		PutInHand(hand);
+		//Vector3 rotation = transform.eulerAngles;
+		//rotation.x = 90.0f;
+		//transform.eulerAngles = rotation;
 	}
-
+	
 	public override void OnBeingRemovedFromHand(){
+		armed = false;
 		PutOutOfSight();
 	}
 
 	public override void OnBeingUsed ()
 	{
-		if (!swing ) {
-			swing = true;
-			animator.SetBool("swing",swing);
-		}
 	}
 
 	public override void OnBeingNotUsed ()
 	{
-		if (!swing) {
-			return;
-		}
-		swing = false;
-		animator.SetBool("swing",swing);
-		transform.localRotation = Quaternion.identity;
 	}
 	
 }

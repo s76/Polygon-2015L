@@ -8,26 +8,23 @@ public class Player : MonoBehaviour
 	public Transform leftHand;
 	public Transform rightHand;
     public GameObject inventoryBuilderObject;
-    private InventoryBuilder2 inventoryBuilder;
+    private InventoryBuilder inventoryBuilder;
 
     void Start() {
-        inventoryBuilder = inventoryBuilderObject.GetComponent<InventoryBuilder2>();
-    } 
-
-    void Update() { 
-
-        //rozwiazanie tymaczasowe - tu tak byc nie moze, bo nawet jezeli klikniecie bylo na przycisk, to i tak zostaje uzyty przedmiot
-        if (Input.GetMouseButton(0)) {
-            Debug.Log("using item");
-            inventoryBuilder.UseLeftHandItem();
-        } 
-        else if (Input.GetMouseButton(1)){
-            Debug.Log("not using item");
-            inventoryBuilder.UseRightHandItem();
-        }
+        inventoryBuilder = inventoryBuilderObject.GetComponent<InventoryBuilder>();
     }
 
-    
+    void Update() {
+        //rozwiazanie tymaczasowe - tu tak byc nie moze, bo nawet jezeli klikniecie bylo na przycisk, to i tak zostaje uzyty przedmiot
+      /*  if (Input.GetMouseButton (0)) {
+			Debug.Log ("using left item");
+			//inventoryBuilder.UseLeftHandItem ();
+		} 
+		if (Input.GetMouseButton(1)){
+            Debug.Log("using right item");
+            //inventoryBuilder.UseRightHandItem();
+        }*/
+    }
 
     void OnTriggerStay(Collider other) {
         if (other.tag == "Item") {

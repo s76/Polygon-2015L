@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public  class InfoPanelManager : MonoBehaviour { 
+public  class InfoPanelManager : MonoBehaviour {
 	
-	private static GameObject infoPanel; 
+	private static GameObject infoPanel;
 
 	void Start(){
 		infoPanel = GameObject.Find ("Info Panel");
