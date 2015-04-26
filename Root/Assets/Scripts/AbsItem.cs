@@ -40,6 +40,7 @@ public abstract class AbsItem : MonoBehaviour
 		transform.localPosition = Vector3.zero;
 		transform.localRotation = Quaternion.identity;
 		transform.localScale = Vector3.one;
+        gameObject.SetActive(true);
 	}
 
 	protected void PutOutOfSight(){
@@ -47,6 +48,7 @@ public abstract class AbsItem : MonoBehaviour
 		transform.localPosition = INVENTORY_LOCATION;
 		transform.localRotation = Quaternion.identity;
 		transform.localScale = Vector3.one;
+        gameObject.SetActive(false);
 		//Debug.Log (transform.localScale);
 	}
 
@@ -55,6 +57,8 @@ public abstract class AbsItem : MonoBehaviour
 		transform.localRotation = Quaternion.identity;
 		transform.localScale = Vector3.one;
 		transform.parent = null;
+        gameObject.SetActive(true);
+        //TODO przedmiot powineien ladowac pod graczem a nie w zero
 		//Debug.Log (transform.localScale);
 	}
 }
