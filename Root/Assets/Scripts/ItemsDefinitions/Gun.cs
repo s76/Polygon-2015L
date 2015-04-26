@@ -7,14 +7,10 @@ using System;
 
 public class Gun : AbsGunItem
 {
-	private GameObject leftHand;
-	private GameObject rightHand;
-
     public  Gun() : base("Gun", false, 20, 0.15f, 250.0f) { } 
 	
 	void Start () {
-		leftHand = GameObject.Find("LeftHandIcon");
-		rightHand = GameObject.Find("RightHandIcon");
+
 	}
 
 	public override void OnBeingPicked ()
