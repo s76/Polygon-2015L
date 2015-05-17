@@ -92,6 +92,13 @@ public abstract class AbsGunItem : AbsItem
 			{
 				hostile.TakeDamage (damage);
 			}
+			AbsLoot loot = shootHit.collider.GetComponent<AbsLoot>();
+			Debug.Log("Loot is: "+loot);
+			if(loot != null)
+			{
+				loot.Push (shootRay.direction);
+			}
+
 			gunLine.SetPosition (1, shootHit.point);
 		}
 		else

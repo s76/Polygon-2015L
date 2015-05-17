@@ -5,5 +5,5 @@ using System.Collections;
 public class Strings {
 	public static string pickUpItem = "Podniosles przedmiot: ";
     public static string dropItem = "Upusciles przedmiot: ";
+	public static string pickUpLoot = "Podniosles lup: ";
 }
- 
