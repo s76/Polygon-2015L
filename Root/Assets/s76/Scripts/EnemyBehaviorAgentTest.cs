@@ -22,7 +22,6 @@ public class EnemyBehaviorAgentTest : MonoBehaviour
 			Debug.Log("Detected target - gonna chase him down !");
 			e_agent.Chase(target);
 		} else {
-			//Debug.Log("See nothing - must do my work !");
 			e_agent.Patrol(stay_time);
 		}
 	}

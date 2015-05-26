@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\s76\Scripts\EnemyBehaviorAgent.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\s76\Scripts\TEST_NavMeshMove.cs">
     <Files>
-      <File FileName="Assets\s76\Scripts\TEST_NavMeshMove.cs" Line="26" Column="28" />
-      <File FileName="Assets\s76\Scripts\EnemyBehaviorAgent.cs" Line="73" Column="18" />
-      <File FileName="Assets\s76\Scripts\EnemyBehaviorAgentTest.cs" Line="15" Column="16" />
+      <File FileName="Assets\s76\Scripts\TEST_NavMeshMove.cs" Line="8" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

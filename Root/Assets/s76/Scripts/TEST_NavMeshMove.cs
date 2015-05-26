@@ -9,11 +9,6 @@ public class TEST_NavMeshMove : MonoBehaviour {
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//agent.SetDestination(destination);
-	}
 
 	void OnGUI () {
 		if( GUILayout.Button("STOP")) {

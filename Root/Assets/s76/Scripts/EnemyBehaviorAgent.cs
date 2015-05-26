@@ -13,14 +13,43 @@ public class EnemyBehaviorAgent : MonoBehaviour
 	NavMeshAgent agent;
 	Transform trans;
 
+	Vector3[] p_points;
+	int last_patrol_point=-1;
+	float stay_time;
+		
+	Transform chase_target;
+	[SerializeField]
+	float stay_rotation_speed;
+	float stay_timer;
+	Quaternion last_rotation;
+	float current_break_angle;
+	
+	float patrol_unstack_timer=0;
+	float patrol_stack_time = 5f;
+	bool start_stack_aware;
+
 	void Awake () {
 		agent = GetComponent<NavMeshAgent>();
 		trans = GetComponent<Transform>();
 	}
+	
+	Vector3 GizmoAngleFunction (float angle) {
+
+		return new Vector3(-Mathf.Cos((angle+90)*Mathf.Deg2Rad),0,Mathf.Sin((angle+90)*Mathf.Deg2Rad));
+	}
 
 	void OnDrawGizmos () {
 		Gizmos.color = Color.white;
-		Gizmos.DrawLine(transform.position,transform.position + transform.forward*vision_range);
+		float y = transform.rotation.eulerAngles.y;
+		Vector3 gizmo_vision_angle_left = GizmoAngleFunction( y - vision_angle/2f)* vision_range;
+		Vector3 gizmo_vision_angle_right = GizmoAngleFunction(y + vision_angle/2f)* vision_range;
+		Vector3 gizmo_vision_range = transform.forward*vision_range;
+
+		Gizmos.DrawLine(transform.position,transform.position + gizmo_vision_range);
+		Gizmos.DrawLine(transform.position,transform.position + gizmo_vision_angle_left);
+		Gizmos.DrawLine(transform.position,transform.position + gizmo_vision_angle_right);
+		Gizmos.DrawLine(transform.position + gizmo_vision_range,transform.position + gizmo_vision_angle_right);
+		Gizmos.DrawLine(transform.position + gizmo_vision_range,transform.position + gizmo_vision_angle_left);
 
 		if ( p_points != null ) {
 			Gizmos.color = Color.yellow;
@@ -30,10 +59,6 @@ public class EnemyBehaviorAgent : MonoBehaviour
 			}
 		}
 	}
-	
-	Vector3[] p_points;
-	int last_patrol_point=-1;
-	float stay_time;
 
 	public void SetPatrolPath ( Transform[] patrol_points, bool random_displacement, float displacement_length) {
 		p_points = new Vector3[patrol_points.Length];
@@ -69,35 +94,33 @@ public class EnemyBehaviorAgent : MonoBehaviour
 		return false;
 	}
 
-	Transform chase_target;
 	public void Chase ( Transform target ) {
 		chase_target = target;
 		current_state = State.Chase;
 	}
 
-	
-	[SerializeField]
-	float stay_rotation_speed;
-	float stay_timer;
-	Quaternion last_rotation;
-	float current_break_angle;
-
 	void Update () {
 		if ( current_state == State.None ) {}
 		else if ( current_state == State.Patrol ) {
-			if ( (p_points[last_patrol_point] - trans.position).sqrMagnitude < 1f ) {
+			if ( agent.remainingDistance < 3 ) start_stack_aware = true;
+			if ( start_stack_aware ) {
+				patrol_unstack_timer += Time.deltaTime;
+			}
+			if ( patrol_unstack_timer > patrol_stack_time | agent.remainingDistance < 0.3f ) {
 				current_state = State.Stay;
-				stay_timer = 0;
+				stay_timer = agent.remainingDistance < 0.3f? 0: patrol_stack_time/2;
+				patrol_unstack_timer = 0;
+				start_stack_aware = agent.remainingDistance < 0.3f ? false: true;
 				last_rotation = trans.rotation;
 				current_break_angle = Random.value*Random.value* 180;
 			}
-			agent.SetDestination(p_points[last_patrol_point]);
 		}
 		else if ( current_state == State.Stay ) {
 			if ( stay_timer > stay_time ) {
 				current_state = State.Patrol;
 				last_patrol_point += 1;
 				if ( last_patrol_point >= p_points.Length ) last_patrol_point -= p_points.Length;
+				agent.SetDestination(p_points[last_patrol_point]);
 			} else {
 				if ( Quaternion.Angle(trans.rotation, last_rotation ) < current_break_angle ) {
 					trans.RotateAround( trans.position, Vector3.up, stay_rotation_speed*Time.deltaTime);
