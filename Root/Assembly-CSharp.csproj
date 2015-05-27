@@ -46,10 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AbsCharacter.cs" />
      <Compile Include="Assets\Scripts\AbsPickable.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollowObject.cs" />
      <Compile Include="Assets\Scripts\Hostiles\AbsHostile.cs" />
      <Compile Include="Assets\Scripts\Hostiles\Guard.cs" />
+     <Compile Include="Assets\Scripts\Inventory\AbsInventoryBuilder.cs" />
+     <Compile Include="Assets\Scripts\Inventory\HostileInventoryBuilder.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryBuilder.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryButtonScript.cs" />
      <Compile Include="Assets\Scripts\Inventory\LootInventoryBuilder.cs" />

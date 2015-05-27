@@ -20,14 +20,20 @@ public class StandardLoot : AbsLoot
 
 	}
 
-	public override Type GetLootType ()
-	{
-		return Type.LIGHT;
-	}
-
 	public override void OnBeingPicked ()
 	{
 		PutOutOfSight ();
 	}
+	
+	public override Type GetLootType ()
+	{
+		return Type.LIGHT;
+	}
+	
+	public override int GetValue ()
+	{
+		return 20;
+	}
+
 }
 

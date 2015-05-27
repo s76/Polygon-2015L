@@ -6,7 +6,7 @@ public abstract class AbsLoot : AbsPickable
 {
 	public enum Type { LIGHT, HEAVY };
 
-	private const int forceValue = 500;
+	protected const int forceValue = 500;
 
 	public AbsLoot(string name): base(name) {
 
@@ -25,6 +25,7 @@ public abstract class AbsLoot : AbsPickable
 	}
 	
 	public abstract Type GetLootType();
+	public abstract int GetValue();
 
 	public void Push (Vector3 force)
 	{

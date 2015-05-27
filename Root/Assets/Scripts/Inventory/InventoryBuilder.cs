@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 
-public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
+public class InventoryBuilder : AbsInventoryBuilder, IPointerExitHandler  {
 
 	public const string LEFT = "Left";
 	public const string RIGHT = "Right";
@@ -18,18 +18,16 @@ public class InventoryBuilder : MonoBehaviour, IPointerExitHandler  {
 	public GameObject inventoryGrid, quickslotPanel;
 	
 	private bool isInventoryOpened;
-	private GameObject leftHand, rightHand;
 	private GameObject[] buttons;
     private List<GameObject> pickedUpObjects;
 
 	void Start () {
 		leftHand = GameObject.Find("LeftHandIcon");
 		rightHand = GameObject.Find("RightHandIcon");
-		
+	
 		if (leftHand == null || rightHand == null) {
 			throw new UnassignedReferenceException("left or right hand icon object is missing");
 		}
-		
 		isInventoryOpened = false;
 		openInventoryButton.gameObject.SetActive (true);
 		closeInventoryButton.gameObject.SetActive (false);

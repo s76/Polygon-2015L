@@ -15,7 +15,7 @@ public class InventoryButtonScript : MonoBehaviour, IPointerClickHandler, IPoint
 	void Start () {
         GameObject inventoryPanelObject = GameObject.Find("Inventory Panel");
         if (inventoryPanelObject == null) {
-            throw new UnassignedReferenceException("inventory builder object missing");
+            throw new UnassignedReferenceException("InventoryBuilder object is missing");
         }
 
         inventoryBuilder = inventoryPanelObject.GetComponent<InventoryBuilder>();

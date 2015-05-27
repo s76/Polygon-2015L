@@ -15,8 +15,8 @@ public class MovementController : MonoBehaviour {
 	void Update () {
         CharacterController controller = GetComponent<CharacterController>();
         Vector3 forward = transform.TransformDirection(Vector3.forward);
-        float curSpeed = speed * Input.GetAxis("Vertical");
-        controller.SimpleMove(forward * curSpeed);
+        float currentSpeed = speed * Input.GetAxis("Vertical");
+        controller.SimpleMove(forward * currentSpeed);
     }
 	
 }

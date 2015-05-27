@@ -2,16 +2,19 @@ using UnityEngine;
 using System.Collections;
 
 
-public class Player : MonoBehaviour
+public class Player : AbsCharacter
 {
-	public float pickUpRange;
-	public Transform leftHand;
-	public Transform rightHand;
+	public float pickUpRange = 5;
+
     public GameObject inventoryBuilderObject;
 	public GameObject lootInventoryBuilderObject;
 
     private InventoryBuilder inventoryBuilder;
 	private LootInventoryBuilder lootInventoryBuilder;
+
+	public Player(): base(400){
+
+	}
 
     void Start() {
         inventoryBuilder = inventoryBuilderObject.GetComponent<InventoryBuilder>();
