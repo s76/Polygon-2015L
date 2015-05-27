@@ -39,33 +39,29 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AbsCharacter.cs" />
-     <Compile Include="Assets\Scripts\AbsPickable.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraFollowObject.cs" />
-     <Compile Include="Assets\Scripts\Hostiles\AbsHostile.cs" />
+     <Compile Include="Assets\Scripts\AbsGunItem.cs" />
+     <Compile Include="Assets\Scripts\AbsHostile.cs" />
+     <Compile Include="Assets\Scripts\AbsItem.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\Camera\CameraFollowObject.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\Camera\CameraZoom.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\Player\MovementController.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\Player\RotationController.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\RaycastingTest.cs" />
+     <Compile Include="Assets\Scripts\CameraAndMovement\Shooting.cs" />
      <Compile Include="Assets\Scripts\Hostiles\Guard.cs" />
-     <Compile Include="Assets\Scripts\Inventory\AbsInventoryBuilder.cs" />
-     <Compile Include="Assets\Scripts\Inventory\HostileInventoryBuilder.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryBuilder.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryButtonScript.cs" />
-     <Compile Include="Assets\Scripts\Inventory\LootInventoryBuilder.cs" />
-     <Compile Include="Assets\Scripts\Items\AbsGunItem.cs" />
-     <Compile Include="Assets\Scripts\Items\AbsItem.cs" />
-     <Compile Include="Assets\Scripts\Items\Axe.cs" />
-     <Compile Include="Assets\Scripts\Items\Gun.cs" />
-     <Compile Include="Assets\Scripts\Loot\AbsLoot.cs" />
-     <Compile Include="Assets\Scripts\Loot\StandardLoot.cs" />
-     <Compile Include="Assets\Scripts\Player\MovementController.cs" />
-     <Compile Include="Assets\Scripts\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Player\RotationController.cs" />
+     <Compile Include="Assets\Scripts\ItemsDefinitions\Axe.cs" />
+     <Compile Include="Assets\Scripts\ItemsDefinitions\Gun.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Strings.cs" />
      <Compile Include="Assets\Scripts\UI\InfoPanelManager.cs" />
      <Compile Include="Assets\Train_Assets\C#_Script\Break_Joint.cs" />
@@ -77,13 +73,16 @@
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
      <Compile Include="Assets\s76\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <Compile Include="Assets\s76\Scripts\EnemyBehaviorAgent.cs" />
+     <Compile Include="Assets\s76\Scripts\EnemyBehaviorAgentTest.cs" />
      <Compile Include="Assets\s76\Scripts\MovableOnPath.cs" />
      <Compile Include="Assets\s76\Scripts\Path.cs" />
+     <Compile Include="Assets\s76\Scripts\TEST_NavMeshMove.cs" />
      <Compile Include="Assets\s76\Scripts\Train.cs" />
      <Compile Include="Assets\strato\MotorMovement.cs" />
      <None Include="Assets\s76\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Unity5.0.0f4/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

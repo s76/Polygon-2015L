@@ -1,43 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inventory\CharacterHands.js">
-    <Files>
-      <File FileName="Assets\Scripts\Loot\StandardLoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Player.cs" Line="8" Column="2" />
-      <File FileName="Assets\Scripts\AbsCharacter.cs" Line="22" Column="2" />
-      <File FileName="Assets\Scripts\Hostiles\AbsHostile.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inventory\InventoryBuilder.cs" Line="149" Column="14" />
-      <File FileName="Assets\strato\MotorMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\MovementController.cs" Line="19" Column="55" />
-      <File FileName="Assets\Scripts\Hostiles\Guard.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Loot\AbsLoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="d:\Users\Maciek\workspace\Git\Polygon-2015L\Root\Assets\Scripts\Items\AbsItem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\InfoPanelManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inventory\InventoryButtonScript.cs" Line="20" Column="3" />
-      <File FileName="Assets\Scripts\Inventory\AbsInventoryBuilder.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inventory\LootInventoryBuilder.cs" Line="12" Column="15" />
-      <File FileName="Assets\Scripts\Inventory\HostileInventoryBuilder.cs" Line="21" Column="2" />
-      <File FileName="Assets\Scripts\Player\RotationController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AbsPickable.cs" Line="8" Column="30" />
-      <File FileName="Assets\Scripts\Inventory\CharacterHands.js" Line="6" Column="29" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
-              <Node name="Camera" expanded="True" />
-              <Node name="Hostiles" expanded="True" />
-              <Node name="Inventory" expanded="True" />
-              <Node name="Items" expanded="True" />
-              <Node name="Loot" expanded="True" />
-              <Node name="Player" expanded="True" />
-              <Node name="UI" expanded="True" />
+              <Node name="Loot" expanded="True">
+                <Node name="StandardLoot.cs" selected="True" />
+              </Node>
             </Node>
-          </Node>
-          <Node name="Assembly-UnityScript" expanded="True" selected="True">
-            <Node name="Scripts" expanded="True" />
           </Node>
         </State>
       </Pad>
