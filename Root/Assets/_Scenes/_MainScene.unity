@@ -3921,6 +3921,7 @@ GameObject:
   - 114: {fileID: 120129362}
   - 114: {fileID: 120129361}
   - 114: {fileID: 120129356}
+  - 54: {fileID: 120129358}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3968,6 +3969,21 @@ MonoBehaviour:
   pickUpRange: 5
   inventoryBuilderObject: {fileID: 842356975}
   lootInventoryBuilderObject: {fileID: 2131648025}
+--- !u!54 &120129358
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 120129354}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &120129359
 Transform:
   m_ObjectHideFlags: 0

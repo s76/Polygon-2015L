@@ -41,14 +41,5 @@ public class Gun : AbsGunItem
 		armed = false;
 		PutOutOfSight();
 	}
-
-	public override void OnBeingUsed ()
-	{
-	}
-
-	public override void OnBeingNotUsed ()
-	{
-	}
-	
 }
 

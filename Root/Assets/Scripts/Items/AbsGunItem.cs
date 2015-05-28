@@ -44,17 +44,7 @@ public abstract class AbsGunItem : AbsItem
 
 	void Update ()
 	{
-		if(armed){
-			timer += Time.deltaTime;
-			
-			if (Input.GetKey (fire) && timer >= interval && Time.timeScale != 0) {
-				Shoot ();
-			}
-			
-			if (timer >= interval * effectsDisplayTime) {
-				DisableEffects ();
-			}
-		}
+
 	}
 	
 	
@@ -63,9 +53,32 @@ public abstract class AbsGunItem : AbsItem
 		gunLine.enabled = false;
 		gunLight.enabled = false;
 	}
+
+	public override void OnBeingUsed ()
+	{
+		CountAndShoot ();
+	}
 	
-	
-	void Shoot ()
+	public override void OnBeingNotUsed ()
+	{
+	}
+
+	protected void CountAndShoot ()
+	{
+		if(armed){
+			timer += Time.deltaTime;
+			
+			if (timer >= interval && Time.timeScale != 0) {
+				Shoot ();
+			}
+			
+			if (timer >= interval * effectsDisplayTime) {
+				DisableEffects ();
+			}
+		}
+	}
+
+	private void Shoot ()
 	{
 		Debug.Log ("Fire!");
 
@@ -106,5 +119,6 @@ public abstract class AbsGunItem : AbsItem
 			gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
 		}
 	}
+
 
 }

@@ -25,6 +25,7 @@ public abstract class AbsLoot : AbsPickable
 	}
 	
 	public abstract Type GetLootType();
+
 	public abstract int GetValue();
 
 	public void Push (Vector3 force)

@@ -23,20 +23,21 @@ public class Player : AbsCharacter
 
     void Update() {
         //rozwiazanie tymaczasowe - tu tak byc nie moze, bo nawet jezeli klikniecie bylo na przycisk, to i tak zostaje uzyty przedmiot
-      /*  if (Input.GetMouseButton (0)) {
+        if (Input.GetMouseButton (0)) {
 			Debug.Log ("using left item");
-			//inventoryBuilder.UseLeftHandItem ();
+			inventoryBuilder.UseLeftHandItem ();
 		} 
 		if (Input.GetMouseButton(1)){
             Debug.Log("using right item");
-            //inventoryBuilder.UseRightHandItem();
-        }*/
+            inventoryBuilder.UseRightHandItem();
+        }
     }
 
 	/** TODO
-	 * - zeby loot dalo sie zebrac dopiero jak upadnie na ziemie
+	 * - zeby loot dalo sie zebrac dopiero jak upadnie z pociagu na ziemie
 	 * - zeby nie dalo sie wchodzic na pociag
 	 * - zeby w okienku na gorze bylo widac ikonki typow lootu i ile ich mamy
+	 * - zeby player ginal przy zderzeniu z pociagiem
 	 */
 
     void OnTriggerStay(Collider collider) {
